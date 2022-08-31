@@ -31,9 +31,9 @@ import java.io.IOException;
  * create an instance of this fragment.
  */
 public class MarketFragment extends Fragment implements AdapterView.OnItemSelectedListener {
-    int laugfs,lassana,kapruka,lowest;
-    String lowestSupermarket;
-    TextView lowestprice;
+    int lowest;
+    String lowestSupermarket,lfsp,lp,kp;
+    TextView lowestprice,laugfsp,lassanap,kaprukap;
     ImageView lowestImage;
 
 
@@ -99,6 +99,10 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
         lowestprice = v.findViewById(R.id.lowestPrice);
         lowestImage = (ImageView)v.findViewById(R.id.lowestPriceImg);
 
+        laugfsp = v.findViewById(R.id.laugfsprice);
+        lassanap = v.findViewById(R.id.lassanaprice);
+        kaprukap = v.findViewById(R.id.kaprukaprice);
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),R.array.vegetables, android.R.layout.simple_spinner_item);
 
         dropdown.setAdapter(adapter);
@@ -112,7 +116,6 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
         String choice = adapterView.getItemAtPosition(i).toString();
 
         if (choice.equals("Potato")){
-            System.out.println(choice);
             webscrapePotato ws = new webscrapePotato();
             ws.execute();
         }else if(choice.equals("Tomato")){
@@ -158,6 +161,8 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
             String pricea = price.replaceAll("[^0-9]","");
             int laugfs = Integer.parseInt(pricea);
             laugfs = laugfs/100;
+            lfsp = String.valueOf(laugfs);
+
             //System.out.println("Laugfs Price: "+ laugfs);
 
             //kapruka
@@ -172,6 +177,7 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
             String price2 = elements2.text();
             String price2a = price2.replaceAll("[^0-9]","");
             int kapruka = Integer.parseInt(price2a);
+            kp = String.valueOf(kapruka);
             //System.out.println("Kapruka Price: "+ kapruka);
 
             //lassana
@@ -186,7 +192,8 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
             String price3a = price3.replaceAll("[^0-9]","");
             int lassana = Integer.parseInt(price3a);
             lassana = (lassana/100)*2;
-            //System.out.println("Lassana Price: "+ lassana);
+            lp = String.valueOf(lassana);
+        //System.out.println("Lassana Price: "+ lassana);
 
             if (laugfs < lassana) {
                 if (laugfs<kapruka){
@@ -217,6 +224,11 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
 
         @Override
         protected void onPostExecute(Void aVoid){
+
+            laugfsp.setText("Rs."+lfsp+".00");
+            lassanap.setText("Rs."+lp+".00");
+            kaprukap.setText("Rs."+kp+".00");
+
             lowestprice.setText("Rs."+lowest+".00 (1KG)");
             if (lowestSupermarket.equals("Laugfs")){
                 lowestImage.setImageResource(R.drawable.laugfs);
@@ -258,6 +270,7 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
             String pricea = price.replaceAll("[^0-9]","");
             int laugfs = Integer.parseInt(pricea);
             laugfs = laugfs/100;
+            lfsp = String.valueOf(laugfs);
             //System.out.println("Laugfs Price: "+ laugfs);
 
             //kapruka
@@ -273,6 +286,7 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
             String price2a = price2.replaceAll("[^0-9]","");
             int kapruka = Integer.parseInt(price2a);
             kapruka = kapruka*2;
+            kp = String.valueOf(kapruka);
             //System.out.println("Kapruka Price: "+ kapruka);
 
             //lassana
@@ -287,6 +301,7 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
             String price3a = price3.replaceAll("[^0-9]","");
             int lassana = Integer.parseInt(price3a);
             lassana = (lassana/100)*2;
+            lp = String.valueOf(lassana);
             //System.out.println("Lassana Price: "+ lassana);
 
 
@@ -318,6 +333,11 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
 
         @Override
         protected void onPostExecute(Void aVoid){
+
+            laugfsp.setText("Rs."+lfsp+".00");
+            lassanap.setText("Rs."+lp+".00");
+            kaprukap.setText("Rs."+kp+".00");
+
             lowestprice.setText("Rs."+lowest+".00 (1KG)");
             if (lowestSupermarket.equals("Laugfs")){
                 lowestImage.setImageResource(R.drawable.laugfs);
