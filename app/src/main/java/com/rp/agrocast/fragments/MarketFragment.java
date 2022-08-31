@@ -34,7 +34,7 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
     int lowest;
     String lowestSupermarket,lfsp,lp,kp;
     TextView lowestprice,laugfsp,lassanap,kaprukap;
-    ImageView lowestImage;
+    ImageView lowestImage,vege;
 
 
 
@@ -98,6 +98,7 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
 
         lowestprice = v.findViewById(R.id.lowestPrice);
         lowestImage = (ImageView)v.findViewById(R.id.lowestPriceImg);
+        vege = (ImageView)v.findViewById(R.id.imageView4);
 
         laugfsp = v.findViewById(R.id.laugfsprice);
         lassanap = v.findViewById(R.id.lassanaprice);
@@ -116,9 +117,11 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
         String choice = adapterView.getItemAtPosition(i).toString();
 
         if (choice.equals("Potato")){
+            vege.setImageResource(R.drawable.potato);
             webscrapePotato ws = new webscrapePotato();
             ws.execute();
         }else if(choice.equals("Tomato")){
+            vege.setImageResource(R.drawable.tomato);
             webscrapeTomato wst = new webscrapeTomato();
             wst.execute();
         }else{
@@ -225,9 +228,9 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
         @Override
         protected void onPostExecute(Void aVoid){
 
-            laugfsp.setText("Rs."+lfsp+".00");
-            lassanap.setText("Rs."+lp+".00");
-            kaprukap.setText("Rs."+kp+".00");
+            laugfsp.setText("Rs."+lfsp+".00 - 1Kg");
+            lassanap.setText("Rs."+lp+".00 - 1Kg");
+            kaprukap.setText("Rs."+kp+".00 - 1Kg");
 
             lowestprice.setText("Rs."+lowest+".00 (1KG)");
             if (lowestSupermarket.equals("Laugfs")){
@@ -334,9 +337,9 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
         @Override
         protected void onPostExecute(Void aVoid){
 
-            laugfsp.setText("Rs."+lfsp+".00");
-            lassanap.setText("Rs."+lp+".00");
-            kaprukap.setText("Rs."+kp+".00");
+            laugfsp.setText("Rs."+lfsp+".00 - 1Kg");
+            lassanap.setText("Rs."+lp+".00 - 1Kg");
+            kaprukap.setText("Rs."+kp+".00 - 1Kg");
 
             lowestprice.setText("Rs."+lowest+".00 (1KG)");
             if (lowestSupermarket.equals("Laugfs")){

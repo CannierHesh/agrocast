@@ -59,7 +59,7 @@
         android:gravity="center"
         android:text="Lowest Price"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,6 +72,7 @@
         android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins"
         android:gravity="center"
+        android:text="Rs.0.00"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -94,10 +95,12 @@
         android:id="@+id/lowestPriceImg"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="4dp"
         android:src="@drawable/supermarket"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/textView12"
         tools:ignore="ImageContrastCheck" />
 
@@ -105,8 +108,12 @@
         android:id="@+id/scrollView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="400dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
@@ -277,6 +284,16 @@
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/veg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

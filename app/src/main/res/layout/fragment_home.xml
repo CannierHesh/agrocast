@@ -86,209 +86,338 @@
         app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:scrollbars="none"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@color/black"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    android:layout_height="match_parent">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/desc1"
+                        android:layout_width="265dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="The Department of Agriculture requests farmers to commence cultivation for the Yala season before the 10th of June.  Agriculture Director General Dr. Ajantha de Silva stated that only 50% of the paddy fields have been harvested during the Yala season.  He also stated that it is essential to cultivate all paady lands during the Yala season to a prevent food shortage in the future."
+                        android:textAlignment="textStart"
+                        android:textColor="@color/hintColor"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/newsimg1"
+                        app:layout_constraintTop_toBottomOf="@+id/News1" />
 
-                        <TextView
-                            android:id="@+id/kaprukaprice"
-                            android:layout_width="304dp"
-                            android:layout_height="20dp"
-                            android:fontFamily="@font/poppins"
+                    <TextView
+                        android:id="@+id/News1"
+                        android:layout_width="262dp"
+                        android:layout_height="43dp"
 
-                            android:text="Vegetable prices spike in Keppetipola"
-                            android:textColor="@color/purple_200"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Yala season cultivations must begin – Agri DG"
+                        android:textColor="@color/teal_700"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/newsimg1"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="32dp"
-                            android:fontFamily="@font/poppins"
-                            android:text="The prices of upcountry vegetables at the Keppetipola Economic Center have increased due to the shortage of fertilizer and  pesticides, Secretary to the Economic Center Mahinda Ratnayaka said."
-                            android:textAlignment="textStart"
-                            android:textColor="@color/hintColor"
-                            android:textSize="10sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/kaprukaprice" />
+                    <ImageView
+                        android:id="@+id/newsimg1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/a"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
 
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView2"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@color/black"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardView">
+                    android:layout_height="match_parent">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/desc2"
+                        android:layout_width="265dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="The prices of upcountry vegetables at the Keppetipola Economic Center have increased due to the shortage of fertilizer and pesticides, Secretary to the Economic Center Mahinda Ratnayaka said."
+                        android:textAlignment="textStart"
+                        android:textColor="@color/hintColor"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/newsimg2"
+                        app:layout_constraintTop_toBottomOf="@+id/News2" />
 
-                        <TextView
-                            android:id="@+id/textView11"
-                            android:layout_width="295dp"
-                            android:layout_height="23dp"
-                            android:fontFamily="@font/poppins"
-                            android:text="Huge shortage of fruit and veg across the Island"
+                    <TextView
+                        android:id="@+id/News2"
+                        android:layout_width="258dp"
+                        android:layout_height="46dp"
 
-                            android:textColor="@color/purple_200"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Vegetable prices spike in Keppetipola"
+                        android:textColor="@color/teal_700"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/newsimg2"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="32dp"
-                            android:fontFamily="@font/poppins"
-                            android:text="Many Economic Centres across the island are experiencing a drastic drop in fruit and vegetable produce, and available crops are being sold at higher prices. However, according to our correspondents, the Manning Market in Colombo saw a reduction in prices when compared to the past few days."
-                            android:textAlignment="textStart"
-                            android:textColor="@color/hintColor"
-                            android:textSize="10sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                    <ImageView
+                        android:id="@+id/newsimg2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/b"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
 
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView3"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@color/black"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardView2">
+                    android:layout_height="match_parent">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/desc3"
+                        android:layout_width="265dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="The vegetable traders at the Manning Market say that the transportation of vegetables has been disrupted due to the prevailing shortage of Diesel.  Chairman of the Peliyagoda Manning Market Association, S. M. Upasena stated that there is a reduction in the rate of customers as well given the fuel and power crises."
+                        android:textAlignment="textStart"
+                        android:textColor="@color/hintColor"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/newsimg3"
+                        app:layout_constraintTop_toBottomOf="@+id/News3" />
 
-                        <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="359dp"
-                            android:layout_height="26dp"
-                            android:fontFamily="@font/poppins"
-                            android:text="Yala season cultivations must begin – Agri DG"
+                    <TextView
+                        android:id="@+id/News3"
+                        android:layout_width="261dp"
+                        android:layout_height="40dp"
 
-                            android:textColor="@color/purple_200"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Power cuts: Manning Market operations disrupted"
+                        android:textColor="@color/teal_700"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/newsimg3"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="32dp"
-                            android:fontFamily="@font/poppins"
-                            android:text="The Department of Agriculture requests farmers to commence cultivation for the Yala season before the 10th of June.  Agriculture Director General Dr. Ajantha de Silva stated that only 50% of the paddy fields have been harvested during the Yala season.  He also stated that it is essential to cultivate all paady lands during the Yala season to a prevent food shortage in the future."
-                            android:textAlignment="textStart"
-                            android:textColor="@color/hintColor"
-                            android:textSize="10sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+                    <ImageView
+                        android:id="@+id/newsimg3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/c"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
 
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                <androidx.cardview.widget.CardView
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@color/black"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardView3">
+                    android:layout_height="match_parent">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/desc4"
+                        android:layout_width="265dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="The Traders Association of the Dambulla Dedicated Economic Center stated that the price of Vegetables is dropping day by day.  The price of vegetables dropped as the traders were NOT making visit to buy Vegetables.  The Chairman of the Traders Association, Shantha Ekanayaka stated that the main reason was the drop in the number of traders who come to buy Vegetables in bulk."
+                        android:textAlignment="textStart"
+                        android:textColor="@color/hintColor"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/newsimg4"
+                        app:layout_constraintTop_toBottomOf="@+id/News4" />
 
-                        <TextView
-                            android:id="@+id/textView13"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins"
-                            android:text="Operations of Manning Market disrupted for first time in history due to power cuts"
+                    <TextView
+                        android:id="@+id/News4"
+                        android:layout_width="257dp"
+                        android:layout_height="47dp"
 
-                            android:textColor="@color/purple_200"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Dambulla vegetable prices drop fast"
+                        android:textColor="@color/teal_700"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/newsimg4"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="32dp"
-                            android:fontFamily="@font/poppins"
-                            android:text="The vegetable traders at the Manning Market say that the transportation of vegetables has been disrupted due to the prevailing shortage of Diesel."
-                            android:textAlignment="textStart"
-                            android:textColor="@color/hintColor"
-                            android:textSize="10sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                    <ImageView
+                        android:id="@+id/newsimg4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/d"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
 
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/desc5"
+                        android:layout_width="265dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="The prices of vegetables and fish in the market have increased rapidly.  Chairman of the Peliyagoda Manning Market Association, H. M. Upasena speaking to News 1st said that prices increased due to the low volume of vegetables and fish received by the markets as a result of the fuel crisis."
+                        android:textAlignment="textStart"
+                        android:textColor="@color/hintColor"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/newsimg5"
+                        app:layout_constraintTop_toBottomOf="@+id/News5" />
+
+                    <TextView
+                        android:id="@+id/News5"
+                        android:layout_width="258dp"
+                        android:layout_height="43dp"
+
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Vegetable and fish prices sky-rocket"
+                        android:textColor="@color/teal_700"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/newsimg5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/newsimg5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/e"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/desc6"
+                        android:layout_width="265dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Many Economic Centres across the island are experiencing a drastic drop in fruit and vegetable produce, and available crops are being sold at higher prices. However, according to our correspondents, the Manning Market in Colombo saw a reduction in prices when compared to the past few days."
+                        android:textAlignment="textStart"
+                        android:textColor="@color/hintColor"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/newsimg6"
+                        app:layout_constraintTop_toBottomOf="@+id/News6" />
+
+                    <TextView
+                        android:id="@+id/News6"
+                        android:layout_width="255dp"
+                        android:layout_height="53dp"
+
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Huge shortage of fruit and veg across the Island"
+                        android:textColor="@color/teal_700"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/newsimg6"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/newsimg6"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/f"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
         </LinearLayout>
     </ScrollView>
 
