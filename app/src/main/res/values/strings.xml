@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Agro Cast</string>
+
+    <string-array name="vegetables">
+        <item>Potato</item>
+        <item>Tomato</item>
+    </string-array>
 </resources>

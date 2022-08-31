@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigation = findViewById(R.id.bottomNavigationBar);
 
         bottomNavigation.add(new MeowBottomNavigation.Model(ID_HOME, R.drawable.ic_home));
-        bottomNavigation.add(new MeowBottomNavigation.Model(ID_CROP, R.drawable.ic_plant));
+        bottomNavigation.add(new MeowBottomNavigation.Model(ID_CROP, R.drawable.ic_swap));
         bottomNavigation.add(new MeowBottomNavigation.Model(ID_PREDICTION, R.drawable.ic_table));
         bottomNavigation.add(new MeowBottomNavigation.Model(ID_PROFILE, R.drawable.ic_account));
 

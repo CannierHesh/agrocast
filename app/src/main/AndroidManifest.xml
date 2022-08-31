@@ -17,25 +17,10 @@
             android:name="com.rp.agrocast.predictions.PricePrediction"
             android:exported="false" />
         <activity
-            android:name="com.rp.agrocast.task_manager.AddTask"
-            android:exported="false" />
-        <activity
-            android:name="com.rp.agrocast.task_manager.TaskFeed"
-            android:exported="false" />
-        <activity
             android:name="com.rp.agrocast.crop_cultivation.FavorableCondition"
             android:exported="false" />
         <activity
             android:name="com.rp.agrocast.crop_cultivation.BestCultivation"
-            android:exported="false" />
-        <activity
-            android:name="com.rp.agrocast.info_feed.AddComments"
-            android:exported="false" />
-        <activity
-            android:name="com.rp.agrocast.info_feed.AddPost"
-            android:exported="false" />
-        <activity
-            android:name="com.rp.agrocast.info_feed.InfoFeed"
             android:exported="false" />
         <activity
             android:name="com.rp.agrocast.SplashScreen"

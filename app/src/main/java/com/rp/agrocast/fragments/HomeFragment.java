@@ -1,6 +1,5 @@
 package com.rp.agrocast.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,8 +11,6 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.rp.agrocast.R;
-import com.rp.agrocast.info_feed.InfoFeed;
-import com.rp.agrocast.task_manager.TaskFeed;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,9 +18,7 @@ import com.rp.agrocast.task_manager.TaskFeed;
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment {
-    FloatingActionButton fabMenu, fabKnowledge, fabTask;
-    Animation fabOpen, fabClose, rotateForward, rotateBackward;
-    boolean isOpen = false;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -71,55 +66,9 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        fabMenu = view.findViewById(R.id.info);
-        fabKnowledge = view.findViewById(R.id.knowledge);
-        fabKnowledge = view.findViewById(R.id.knowledge);
-        fabTask = view.findViewById(R.id.task);
-
-        fabOpen = AnimationUtils.loadAnimation(getContext(), R.anim.fab_open);
-        fabClose = AnimationUtils.loadAnimation(getContext(), R.anim.fab_close);
-        rotateForward = AnimationUtils.loadAnimation(getContext(), R.anim.rotate_forward);
-        rotateBackward = AnimationUtils.loadAnimation(getContext(), R.anim.rotate_backward);
-
-        fabMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                animateFab();
-            }
-        });
-
-        fabKnowledge.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getContext(), InfoFeed.class));
-            }
-        });
-
-        fabTask.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getContext(), TaskFeed.class));
-            }
-        });
 
         return view;
     }
 
-    private void animateFab() {
-        if (isOpen){
-            fabMenu.startAnimation(rotateBackward);
-            fabKnowledge.startAnimation(fabClose);
-            fabTask.startAnimation(fabClose);
-            fabKnowledge.setClickable(false);
-            fabTask.setClickable(false);
-            isOpen=false;
-        }else{
-            fabMenu.startAnimation(rotateForward);
-            fabKnowledge.startAnimation(fabOpen);
-            fabTask.startAnimation(fabOpen);
-            fabKnowledge.setClickable(true);
-            fabTask.setClickable(true);
-            isOpen=true;
-        }
-    }
+
 }

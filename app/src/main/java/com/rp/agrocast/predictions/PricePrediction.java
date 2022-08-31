@@ -49,13 +49,13 @@ public class PricePrediction extends AppCompatActivity {
         setContentView(R.layout.activity_price_prediction);
 
         et_temperature_potato = findViewById(R.id.et_tempurature2);
-        tv_potatoPrice = findViewById(R.id.tv_predict_value2);
-        potato_btn = findViewById(R.id.btn_predict_beetroot);
+        tv_potatoPrice = findViewById(R.id.tv_predict_value);
+        potato_btn = findViewById(R.id.btn_predict_potato);
         calender_potato = findViewById(R.id.calendarView2);
         et_temperature_tomato = findViewById(R.id.et_tempurature);
-        tv_tomatoPrice = findViewById(R.id.tv_predict_value);
+        tv_tomatoPrice = findViewById(R.id.tv_predict_value2);
         calender_tomato = findViewById(R.id.calendarView);
-        tomato_btn = findViewById(R.id.btn_predict_carrot);
+        tomato_btn = findViewById(R.id.btn_predict_tomato);
 
         Date c = Calendar.getInstance().getTime();
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());

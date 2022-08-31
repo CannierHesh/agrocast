@@ -99,7 +99,7 @@ public class Password extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     loginProgressbar.setVisibility(View.VISIBLE);
                     if (task.isSuccessful()) {
-                        Toast.makeText(Password.this, "User Created.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Password.this, "Account Created.", Toast.LENGTH_SHORT).show();
                         userID = fAuth.getCurrentUser().getUid();
                         DocumentReference documentReference = fStore.collection("users").document(userID);
                         Map<String, Object> user = new HashMap<>();
