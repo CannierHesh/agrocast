@@ -4,16 +4,16 @@
     <item android:state_enabled="true" android:state_focused="true">
         <shape android:shape="rectangle">
             <corners android:radius="10dp" />
-            <gradient android:startColor="@color/primary_colour" android:endColor="@color/white"/>
-            <stroke android:width="3dp" android:color="@color/secondery_colour" />
+            <gradient android:startColor="@color/circleColor" android:endColor="@color/white"/>
+            <stroke android:width="3dp" android:color="@color/circleColor" />
         </shape>
     </item>
 
     <item android:state_enabled="true">
         <shape android:shape="rectangle">
             <corners android:radius="10dp" />
-            <gradient android:startColor="@color/primary_colour" android:endColor="@color/white"/>
-            <stroke android:width="3dp" android:color="@color/primary_colour" />
+            <gradient android:startColor="@color/circleColor" android:endColor="@color/white"/>
+            <stroke android:width="3dp" android:color="#FFFFFF" />
         </shape>
     </item>
 

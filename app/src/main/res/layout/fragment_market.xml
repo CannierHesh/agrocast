@@ -4,9 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_bg"
+    android:background="@color/background_color"
     android:scrollbars="none"
-    tools:context=".fragments.MarketFragment">
+    tools:context=".fragments.MarketFrag">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="369dp"
+        android:layout_height="219dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/green_frame"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <View
         android:id="@+id/textView3"
@@ -48,13 +60,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lowestPrice" />
+        app:layout_constraintTop_toBottomOf="@+id/lowestPrice"
+        app:layout_constraintVertical_bias="0.727" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="Select Vegetable:"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins"
         android:gravity="center"
         android:text="Lowest Price"
@@ -69,11 +97,11 @@
         android:id="@+id/lowestPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins"
         android:gravity="center"
         android:text="Rs.0.00"
-        android:textColor="@color/black"
+        android:textColor="@color/secondery_colour"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,24 +111,23 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="41dp"
-        android:background="@drawable/input_bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/prediction_btn_bg"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <ImageView
         android:id="@+id/lowestPriceImg"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="5dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
         android:src="@drawable/supermarket"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/textView12"
         tools:ignore="ImageContrastCheck" />
 
@@ -111,12 +138,14 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="400dp"
         android:layout_marginEnd="10dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -125,17 +154,21 @@
                 android:id="@+id/cardView3"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:background="@color/black">
+                android:background="@color/black"
+                app:cardCornerRadius="8dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
 
                     <ImageView
                         android:id="@+id/imageView32"
                         android:layout_width="77dp"
                         android:layout_height="85dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
                         android:src="@drawable/laugfs"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -144,14 +177,14 @@
                     <TextView
                         android:id="@+id/laugfsprice"
                         android:layout_width="304dp"
-                        android:layout_height="20dp"
+                        android:layout_height="25dp"
                         android:layout_marginStart="10dp"
 
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="30dp"
                         android:fontFamily="@font/poppins"
                         android:text="Rs.0.00"
                         android:textColor="@color/black"
-                        android:textSize="14sp"
+                        android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/imageView32"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -166,7 +199,7 @@
                         android:text="Laugfs Super"
                         android:textAlignment="textStart"
                         android:textColor="@color/hintColor"
-                        android:textSize="10sp"
+                        android:textSize="12sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imageView32"
                         app:layout_constraintTop_toBottomOf="@+id/laugfsprice" />
@@ -179,7 +212,9 @@
                 android:id="@+id/cardView2"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:background="@color/black">
+                android:layout_marginTop="5dp"
+                android:background="@color/black"
+                app:cardCornerRadius="8dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -190,6 +225,8 @@
                         android:layout_width="77dp"
                         android:layout_height="85dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
                         android:src="@drawable/lassana"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -198,14 +235,14 @@
                     <TextView
                         android:id="@+id/lassanaprice"
                         android:layout_width="304dp"
-                        android:layout_height="20dp"
+                        android:layout_height="25dp"
                         android:layout_marginStart="10dp"
 
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="30dp"
                         android:fontFamily="@font/poppins"
                         android:text="Rs.0.00"
                         android:textColor="@color/black"
-                        android:textSize="14sp"
+                        android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/imageView31"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -220,7 +257,7 @@
                         android:text="Lassana Flora"
                         android:textAlignment="textStart"
                         android:textColor="@color/hintColor"
-                        android:textSize="10sp"
+                        android:textSize="12sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imageView31"
                         app:layout_constraintTop_toBottomOf="@+id/lassanaprice" />
@@ -233,7 +270,9 @@
                 android:id="@+id/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:background="@color/black">
+                android:layout_marginTop="5dp"
+                android:background="@color/black"
+                app:cardCornerRadius="8dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -244,6 +283,8 @@
                         android:layout_width="77dp"
                         android:layout_height="85dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
                         android:src="@drawable/kapruka"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -252,14 +293,14 @@
                     <TextView
                         android:id="@+id/kaprukaprice"
                         android:layout_width="304dp"
-                        android:layout_height="20dp"
+                        android:layout_height="25dp"
                         android:layout_marginStart="10dp"
 
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="30dp"
                         android:fontFamily="@font/poppins"
                         android:text="Rs.0.00"
                         android:textColor="@color/black"
-                        android:textSize="14sp"
+                        android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/imageView3"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -274,7 +315,7 @@
                         android:text="Kapruka"
                         android:textAlignment="textStart"
                         android:textColor="@color/hintColor"
-                        android:textSize="10sp"
+                        android:textSize="12sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imageView3"
                         app:layout_constraintTop_toBottomOf="@+id/kaprukaprice" />
@@ -287,12 +328,12 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="104dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="4dp"
         android:src="@drawable/veg"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
 

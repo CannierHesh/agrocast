@@ -92,7 +92,7 @@ public class PricePrediction extends AppCompatActivity {
                   temperature = Double.parseDouble(temp);
               }
 
-              BeetrootForecast();
+              PotatoForecast();
           }
       });
 
@@ -107,13 +107,13 @@ public class PricePrediction extends AppCompatActivity {
                     temperature = Double.parseDouble(temp);
                 }
 
-                CarrotForecast();
+                TomatoForecast();
             }
         });
         
     }
 
-    private void CarrotForecast() {
+    private void TomatoForecast() {
         String json = "{\"Inputs\":{\"data\":[{\"Days\":\""+date+"\",\"Tempreture\":"+temperature+"}]},\"GlobalParameters\":{\"quantiles\":[0.025,0.975]}}";
 
         JsonParser jsonParser = new JsonParser();
@@ -132,7 +132,7 @@ public class PricePrediction extends AppCompatActivity {
                     float p = Float.parseFloat(price);
                     tv_tomatoPrice.setText("RS : "+round(p,2));
                 }else{
-                    Toast.makeText(PricePrediction.this, "Fail : " + response, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PricePrediction.this, "Fail : " + "Please select a Future Date", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -190,7 +190,7 @@ public class PricePrediction extends AppCompatActivity {
     });
     }
 
-    private void BeetrootForecast(){
+    private void PotatoForecast(){
         String json = "{\"Inputs\":{\"data\":[{\"Days\":\""+date+"\",\"Tempreture\":"+temperature+"}]},\"GlobalParameters\":{\"quantiles\":[0.025,0.975]}}";
 
         JsonParser jsonParser = new JsonParser();
@@ -207,7 +207,7 @@ public class PricePrediction extends AppCompatActivity {
                     float p = Float.parseFloat(price);
                     tv_potatoPrice.setText("RS : "+round(p,2));
                 }else{
-                    Toast.makeText(PricePrediction.this, "Fail : " + response, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PricePrediction.this, "Fail : " + "Please Select a Future Date", Toast.LENGTH_SHORT).show();
                 }
             }
 

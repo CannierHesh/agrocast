@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_bg"
+    android:background="@color/background_color"
     android:scrollbars="none"
     tools:context=".predictions.PricePrediction">
 
@@ -25,19 +25,34 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="Price Prediction"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/carrot_cv"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/green_frame">
 
                 <TextView
                     android:id="@+id/tv_topic"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/input_bg"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/poppins"
-                    android:gravity="center"
+                    android:gravity="left"
                     android:text="Potato"
                     android:textColor="@color/black"
                     android:textSize="24sp"
@@ -51,46 +66,45 @@
                     android:id="@+id/tv_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
                     android:fontFamily="@font/poppins"
                     android:gravity="center"
-                    android:text="Prediction Date : "
+                    android:text="Select Date : "
                     android:textColor="@color/black"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_topic" />
 
                 <TextView
                     android:id="@+id/calendarView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="150dp"
+                    android:layout_height="38dp"
                     android:layout_marginTop="8dp"
-                    android:text=""
                     android:fontFamily="@font/poppins"
                     android:gravity="center"
-                    android:textColor="@color/black"
+                    android:text=""
+                    android:textColor="@color/secondery_colour"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_topic" />
 
 
                 <EditText
                     android:id="@+id/et_tempurature"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:ems="10"
-                    android:inputType="text"
                     android:hint="Temperature"
+                    android:inputType="text"
                     android:textAlignment="center"
                     app:layout_constraintBottom_toTopOf="@+id/et_humidity"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
                     app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
                 <EditText
@@ -99,10 +113,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:ems="10"
-                    android:visibility="gone"
-                    android:inputType="number"
                     android:hint="Humidity"
+                    android:inputType="number"
                     android:textAlignment="center"
+                    android:visibility="gone"
                     app:layout_constraintBottom_toTopOf="@+id/btn_predict_potato"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -123,8 +137,7 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/tv_predict_value"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
                     app:layout_constraintTop_toBottomOf="@+id/et_humidity" />
 
                 <TextView
@@ -132,6 +145,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:layout_marginBottom="20dp"
                     android:fontFamily="@font/poppins"
                     android:gravity="center"
                     android:text="Rs: 000.00"
@@ -140,26 +154,47 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
                     app:layout_constraintTop_toBottomOf="@+id/btn_predict_potato" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="132dp"
+                    android:layout_height="128dp"
+                    android:layout_marginLeft="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/calendarView"
+                    app:srcCompat="@drawable/potato" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/beetroot_cv"
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/green_frame">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="132dp"
+                    android:layout_height="128dp"
+                    android:layout_marginLeft="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/calendarView2"
+                    app:srcCompat="@drawable/tomato" />
 
                 <TextView
                     android:id="@+id/tv_topic2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/input_bg"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/poppins"
-                    android:gravity="center"
+                    android:gravity="left"
                     android:text="Tomato"
                     android:textColor="@color/black"
                     android:textSize="24sp"
@@ -173,46 +208,46 @@
                     android:id="@+id/tv_date2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
                     android:fontFamily="@font/poppins"
                     android:gravity="center"
-                    android:text="Prediction Date : "
+                    android:text="Select Date : "
                     android:textColor="@color/black"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_topic2" />
 
                 <TextView
                     android:id="@+id/calendarView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="150dp"
+                    android:layout_height="41dp"
                     android:layout_marginTop="8dp"
-                    android:text=""
                     android:fontFamily="@font/poppins"
                     android:gravity="center"
-                    android:textColor="@color/black"
+                    android:text=""
+                    android:textColor="@color/secondery_colour"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_date2" />
+                    app:layout_constraintStart_toEndOf="@+id/imageView7"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_topic2" />
 
 
                 <EditText
                     android:id="@+id/et_tempurature2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:ems="10"
-                    android:inputType="text"
                     android:hint="Temperature"
+                    android:inputType="text"
                     android:textAlignment="center"
                     app:layout_constraintBottom_toTopOf="@+id/et_humidity2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView7"
                     app:layout_constraintTop_toBottomOf="@+id/calendarView2" />
 
                 <EditText
@@ -221,10 +256,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:ems="10"
-                    android:visibility="gone"
-                    android:inputType="number"
                     android:hint="Humidity"
+                    android:inputType="number"
                     android:textAlignment="center"
+                    android:visibility="gone"
                     app:layout_constraintBottom_toTopOf="@+id/btn_predict_tomato"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -246,7 +281,7 @@
                     app:layout_constraintBottom_toTopOf="@+id/tv_predict_value2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView7"
                     app:layout_constraintTop_toBottomOf="@+id/et_humidity2" />
 
                 <TextView
@@ -254,6 +289,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:layout_marginBottom="20dp"
                     android:fontFamily="@font/poppins"
                     android:gravity="center"
                     android:text="Rs: 000.00"
@@ -263,11 +299,10 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView7"
                     app:layout_constraintTop_toBottomOf="@+id/btn_predict_tomato" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
         </LinearLayout>

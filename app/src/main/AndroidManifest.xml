@@ -23,7 +23,7 @@
             android:name="com.rp.agrocast.crop_cultivation.BestCultivation"
             android:exported="false" />
         <activity
-            android:name="com.rp.agrocast.SplashScreen"
+            android:name="com.rp.agrocast.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

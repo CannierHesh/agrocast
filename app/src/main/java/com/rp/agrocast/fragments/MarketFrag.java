@@ -1,10 +1,7 @@
 package com.rp.agrocast.fragments;
 
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
@@ -27,10 +23,10 @@ import java.io.IOException;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MarketFragment#newInstance} factory method to
+ * Use the {@link MarketFrag#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MarketFragment extends Fragment implements AdapterView.OnItemSelectedListener {
+public class MarketFrag extends Fragment implements AdapterView.OnItemSelectedListener {
     int lowest;
     String lowestSupermarket,lfsp,lp,kp;
     TextView lowestprice,laugfsp,lassanap,kaprukap;
@@ -49,7 +45,7 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
     private String mParam1;
     private String mParam2;
 
-    public MarketFragment() {
+    public MarketFrag() {
         // Required empty public constructor
     }
 
@@ -59,11 +55,11 @@ public class MarketFragment extends Fragment implements AdapterView.OnItemSelect
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MarketFragment.
+     * @return A new instance of fragment MarketFrag.
      */
     // TODO: Rename and change types and number of parameters
-    public static MarketFragment newInstance(String param1, String param2) {
-        MarketFragment fragment = new MarketFragment();
+    public static MarketFrag newInstance(String param1, String param2) {
+        MarketFrag fragment = new MarketFrag();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

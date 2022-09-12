@@ -37,21 +37,27 @@
         <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/21_22-j-14/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/21_22-j-14/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.34" />
         <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/21_22-j-14/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.34" />
+        <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/drawable/green_frame.xml" value="0.258" />
         <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/drawable/ic_account.xml" value="0.1775" />
         <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/drawable/ic_plant.xml" value="0.253" />
         <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/drawable/ic_swap.xml" value="0.21" />
         <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/drawable/input_bg.xml" value="0.1835" />
+        <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/drawable/prediction_btn_bg.xml" value="0.1365" />
         <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/activity_add_post.xml" value="0.284375" />
         <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/activity_favorable_condition.xml" value="0.284375" />
         <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/activity_main.xml" value="0.3625" />
-        <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/activity_price_prediction.xml" value="0.3625" />
+        <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/activity_password.xml" value="0.1762917933130699" />
+        <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/activity_price_prediction.xml" value="0.33" />
         <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/activity_register.xml" value="0.276268115942029" />
+        <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/activity_splash_screen.xml" value="0.33" />
         <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/each_comment.xml" value="0.284375" />
-        <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/fragment_market.xml" value="0.5" />
-        <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/fragment_prediction.xml" value="0.5" />
+        <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/fragment_market.xml" value="0.33" />
+        <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/fragment_prediction.xml" value="0.4203703703703704" />
         <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/fragment_profile.xml" value="0.3625" />
+        <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/layout/slider_item.xml" value="0.3614583333333333" />
+        <entry key="..\:/Users/ysraf/OneDrive/Desktop/research project/agrocast/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.186" />
       </map>
     </option>
   </component>

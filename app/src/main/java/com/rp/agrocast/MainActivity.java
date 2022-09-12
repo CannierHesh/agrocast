@@ -7,10 +7,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
-import com.rp.agrocast.fragments.MarketFragment;
-import com.rp.agrocast.fragments.HomeFragment;
-import com.rp.agrocast.fragments.PredictionFragment;
-import com.rp.agrocast.fragments.ProfileFragment;
+import com.rp.agrocast.fragments.HomeFrag;
+import com.rp.agrocast.fragments.MarketFrag;
+import com.rp.agrocast.fragments.PredictionFrag;
+import com.rp.agrocast.fragments.ProfileFrag;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private final int ID_CROP = 2;
     private final int ID_PREDICTION = 3;
     private final int ID_PROFILE = 4;
+
     MeowBottomNavigation bottomNavigation;
 
     @Override
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
 //        bottomNavigation.setCount(3, "5");
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_container,new HomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_container,new HomeFrag()).commit();
 
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override
@@ -51,13 +52,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClickItem(MeowBottomNavigation.Model item) {
                 Fragment fragment = null;
                 if (item.getId() == 1) {
-                    fragment = new HomeFragment();
+                    fragment = new HomeFrag();
                 } else if (item.getId() == 2) {
-                    fragment = new MarketFragment();
+                    fragment = new MarketFrag();
                 } else if (item.getId() == 3) {
-                    fragment = new PredictionFragment();
+                    fragment = new PredictionFrag();
                 } else if (item.getId() == 4) {
-                    fragment = new ProfileFragment();
+                    fragment = new ProfileFrag();
                 }
 
                 loadFragment(fragment);
